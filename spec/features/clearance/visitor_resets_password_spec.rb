@@ -39,7 +39,7 @@ feature "Visitor resets password" do
     expect(user.confirmation_token).not_to be_blank
     expect_mailer_to_have_delivery(
       user.email,
-      "password",
+      "senha",
       user.confirmation_token
     )
   end
