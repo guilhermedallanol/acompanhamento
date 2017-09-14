@@ -1,6 +1,11 @@
 pt-BR:
+  clearance:
+    models:
+      clearance_mailer:
+        change_password: Mude sua senha
   clearance_mailer:
     change_password:
+      link_text: Alterar minha senha
       opening:
         "Alguém, esperamos que você, solicitou que enviássemos um link para alterar a sua senha:"
       closing:
@@ -54,7 +59,7 @@ pt-BR:
       description:
         "Para receber um link para resetar sua senha, por favor, digite seu endereço de email."
       title:
-        "Resete sua senha"
+        "Mude sua senha"
   sessions:
     form:
       forgot_password:
