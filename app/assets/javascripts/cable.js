@@ -5,6 +5,7 @@
 //= require_self
 //= require_tree ./channels
 
+/* jshint expr: true */
 (function() {
   this.App || (this.App = {});
 
