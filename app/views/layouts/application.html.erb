@@ -9,6 +9,20 @@
   </head>
 
   <body>
+
+    <% if signed_in? %>
+      Logado como: <%= current_user.email %>
+      <%= button_to t("layouts.application.sign_out"), sign_out_path, method: :delete %>
+    <% else %>
+      <%= link_to t("helpers.submit.session.submit"), sign_in_path %>
+    <% end %>
+
+    <div id="flash">
+      <% flash.each do |key, value| %>
+        <div class="flash <%= key %>"><%= value %></div>
+      <% end %>
+    </div>
+
     <%= yield %>
   </body>
 </html>

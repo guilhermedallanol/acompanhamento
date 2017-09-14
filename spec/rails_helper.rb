@@ -5,8 +5,6 @@ require 'spec_helper'
 require 'rspec/rails'
 require 'capybara/rails'
 require 'capybara/poltergeist'
-require 'rack_session_access/capybara'
-require "paperclip/matchers"
 
 if ENV['COVERAGE']
   require 'simplecov'
@@ -37,7 +35,6 @@ end
 
 RSpec.configure do |config|
   config.use_transactional_fixtures = false
-  config.include Paperclip::Shoulda::Matchers
   config.before(:each, js: true) do
     default_url_options[:host] = 'localhost:3000'
   end
