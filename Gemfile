@@ -39,9 +39,10 @@ group :development do
 end
 
 group :test do
-  gem 'database_cleaner',    '~> 1.6.1'
-  gem 'shoulda-matchers',    '~> 3.1.2'
-  gem 'simplecov',           '~> 0.15.1', require: false
+  gem 'database_cleaner',          '~> 1.6.1'
+  gem 'shoulda-matchers',          '~> 3.1.2'
+  gem 'simplecov',                 '~> 0.15.1', require: false
+  gem 'codeclimate-test-reporter', '~> 1.0.7'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
