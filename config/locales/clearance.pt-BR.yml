@@ -18,7 +18,9 @@ pt-BR:
     failure_after_create:
       "Email ou senha não encontrados. Deseja criar uma nova conta? <a href='/sign_up'>Registrar-se</a>."
     failure_when_access_denied:
-      "Por favor, efetue login."
+      "Você não está autorizado a realizar essa ação."
+    failure_when_not_signed_in:
+      "Por favor, efetue seu login."
   helpers:
     submit:
       password:
@@ -57,9 +59,9 @@ pt-BR:
         "Altere sua senha"
     new:
       description:
-        "Para receber um link para resetar sua senha, por favor, digite seu endereço de email."
+        "Para receber um link para criar uma nova senha, por favor, digite seu endereço de email."
       title:
-        "Mude sua senha"
+        "Encontre sua conta"
   sessions:
     form:
       forgot_password:
@@ -68,7 +70,7 @@ pt-BR:
         "Registrar-se"
     new:
       title:
-        "Entre"
+        "Entrar"
   users:
     new:
       title:
