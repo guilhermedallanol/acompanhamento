@@ -1,0 +1,22 @@
+<h1><%= t('.title') %></h1>
+
+<h2><%= t(:weights, count: @weights.count) %></h2>
+
+<% if @weights.any? %>
+  <table>
+    <thead>
+      <th>Data</th>
+      <th>Peso</th>
+      <th>Ações</th>
+    </thead>
+    <tbody>
+      <% @weights.each do |weight| %>
+        <tr id="<%= dom_id(weight) %>">
+          <td><%= weight.registered_on %></td>
+          <td><%= weight.value %></td>
+          <td></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>

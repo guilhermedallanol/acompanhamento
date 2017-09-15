@@ -1,0 +1,8 @@
+---
+pt-BR:
+  weights:
+    one: "%{count} registro"
+    other: "%{count} registros"
+    zero: Ainda não há registros de peso nessa conta
+    index:
+      title: Gráfico de Emagrecimento
