@@ -1,4 +1,6 @@
 class WeightDecorator < ApplicationDecorator
+  include Destructable
+
   delegate_all
 
   def registered_on

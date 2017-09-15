@@ -6,3 +6,7 @@ pt-BR:
     zero: Ainda não há registros de peso nessa conta
     index:
       title: Gráfico de Emagrecimento
+    destroy:
+      success: Registro de peso removido com sucesso
+  weight:
+    confirm_deletion: Você tem certeza que deseja excluir esse registro?

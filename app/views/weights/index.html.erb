@@ -7,14 +7,14 @@
     <thead>
       <th>Data</th>
       <th>Peso</th>
-      <th>Ações</th>
+      <th></th>
     </thead>
     <tbody>
       <% @weights.each do |weight| %>
         <tr id="<%= dom_id(weight) %>">
           <td><%= weight.registered_on %></td>
           <td><%= weight.value %></td>
-          <td></td>
+          <td><%= weight.destroy_link %></td>
         </tr>
       <% end %>
     </tbody>
