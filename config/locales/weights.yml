@@ -6,7 +6,21 @@ pt-BR:
     zero: Ainda não há registros de peso nessa conta
     index:
       title: Gráfico de Emagrecimento
+    new:
+      title: Registrar novo Peso
+    create:
+      success: Peso registrado com sucesso
+      failure: Peso registrado com sucesso
     destroy:
       success: Registro de peso removido com sucesso
   weight:
     confirm_deletion: Você tem certeza que deseja excluir esse registro?
+  activerecord:
+    models:
+      weight:
+        one: Peso
+        other: Pesos
+    attributes:
+      weight:
+        registered_on: Data de Registro
+        value: Peso
