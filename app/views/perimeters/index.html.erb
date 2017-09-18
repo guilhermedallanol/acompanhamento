@@ -14,6 +14,7 @@
       <th>Quadril</th>
       <th>Coxa</th>
       <th>Panturrilha</th>
+      <th></th>
     </thead>
     <tbody>
       <% @perimeters.each do |perimeter| %>
@@ -27,6 +28,7 @@
           <td><%= perimeter.hip %></td>
           <td><%= perimeter.thigh %></td>
           <td><%= perimeter.calf %></td>
+          <td><%= perimeter.destroy_link %></td>
         </tr>
       <% end %>
     </tbody>

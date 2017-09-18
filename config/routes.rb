@@ -2,5 +2,5 @@ Rails.application.routes.draw do
   root to: "dashboard#show"
 
   resources :weights, only: [:index, :destroy, :new, :create]
-  resources :perimeters, only: [:index]
+  resources :perimeters, only: [:index, :destroy]
 end
