@@ -5,6 +5,6 @@ class WeightDecorator < ApplicationDecorator
   delegate_all
 
   def value
-    h.number_to_human(object.value, units: { unit: "kg"}, precision: 6 )
+    number_to_kilogram(object.value)
   end
 end
