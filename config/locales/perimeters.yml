@@ -10,18 +10,17 @@ pt-BR:
       title: Registrar novo Perímetro
     create:
       success: Perímetro registrado com sucesso
-      failure: Perímetro registrado com sucesso
     destroy:
       success: Registro de perímetro removido com sucesso
-  weight:
+  perimeter:
     confirm_deletion: Você tem certeza que deseja excluir esse registro?
   activerecord:
     models:
-      weight:
+      perimeter:
         one: Perímetro
         other: Perímetros
     attributes:
-      weight:
+      perimeter:
         registered_on: Data de Registro
         wrist: Punho
         arm: Braço Relaxado
@@ -31,3 +30,19 @@ pt-BR:
         hip: Quadril
         thigh: Coxa
         calf: Panturrilha
+  simple_form:
+    labels:
+      perimeter:
+        registered_on: Data de Registro
+        abdomen: Abdômen
+        arm: Braço Relaxado
+        calf: Panturrilha
+        chest: Peitoral
+        hip: Quadril
+        thigh: Coxa
+        waist: Cintura
+        wrist: Punho
+  helpers:
+    submit:
+      perimeter:
+        create: Registrar

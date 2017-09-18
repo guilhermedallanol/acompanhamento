@@ -10,7 +10,6 @@ pt-BR:
       title: Registrar novo Peso
     create:
       success: Peso registrado com sucesso
-      failure: Peso registrado com sucesso
     destroy:
       success: Registro de peso removido com sucesso
   weight:
@@ -24,3 +23,12 @@ pt-BR:
       weight:
         registered_on: Data de Registro
         value: Peso
+  simple_form:
+    labels:
+      weight:
+        registered_on: Data de Registro
+        value: Peso
+  helpers:
+    submit:
+      weight:
+        create: Registrar
