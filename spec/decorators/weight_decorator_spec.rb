@@ -1,17 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe WeightDecorator do
+  it_behaves_like 'a registrable date decorator'
+
   let(:object) { Weight.new }
   let(:helper) { double(:helper) }
 
   subject { described_class.new(object) }
-
-  describe "#registered_on" do
-    it "returns formatted value" do
-      object.registered_on = '2012-12-21'
-      expect(subject.registered_on).to eql '21/12/2012'
-    end
-  end
 
   describe "#value" do
     it "returns formatted value" do
