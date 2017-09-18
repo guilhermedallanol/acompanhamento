@@ -1,0 +1,33 @@
+---
+pt-BR:
+  perimeters:
+    one: "%{count} registro"
+    other: "%{count} registros"
+    zero: Ainda não há registros de perímetro nessa conta
+    index:
+      title: Gráfico de Perímetros
+    new:
+      title: Registrar novo Perímetro
+    create:
+      success: Perímetro registrado com sucesso
+      failure: Perímetro registrado com sucesso
+    destroy:
+      success: Registro de perímetro removido com sucesso
+  weight:
+    confirm_deletion: Você tem certeza que deseja excluir esse registro?
+  activerecord:
+    models:
+      weight:
+        one: Perímetro
+        other: Perímetros
+    attributes:
+      weight:
+        registered_on: Data de Registro
+        wrist: Punho
+        arm: Braço Relaxado
+        chest: Peitoral
+        waist: Cintura
+        abdomen: Abdômen
+        hip: Quadril
+        thigh: Coxa
+        calf: Panturrilha
