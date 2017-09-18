@@ -1,4 +1,4 @@
-module Destructable
+module DestroyLink
   def destroy_link
     h.link_to 'Excluir', object,
       method: :delete,
