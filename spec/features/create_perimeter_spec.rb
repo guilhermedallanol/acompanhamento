@@ -7,7 +7,6 @@ feature "Creating a Perimeter" do
 
       visit new_perimeter_path
 
-      fill_in "Data de Registro", with: "21/12/2012"
       fill_in 'Abdômen',        with: 90
       fill_in 'Braço Relaxado', with: 30
       fill_in 'Panturrilha',    with: 25

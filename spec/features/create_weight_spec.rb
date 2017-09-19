@@ -7,7 +7,6 @@ feature "Creating a Weight" do
 
       visit new_weight_path
 
-      fill_in "Data de Registro", with: "21/12/2012"
       fill_in "Peso", with: "90"
 
       click_button "Registrar"
