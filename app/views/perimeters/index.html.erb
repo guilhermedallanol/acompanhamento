@@ -1,5 +1,7 @@
 <h1><%= t('.title') %></h1>
 
+<%= link_to t(".new"), new_perimeter_path %>
+
 <h2><%= t(:perimeters, count: @perimeters.count) %></h2>
 
 <% if @perimeters.any? %>

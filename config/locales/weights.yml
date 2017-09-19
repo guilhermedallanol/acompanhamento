@@ -6,6 +6,7 @@ pt-BR:
     zero: Ainda não há registros de peso nessa conta
     index:
       title: Gráfico de Emagrecimento
+      new: Registrar Peso
     new:
       title: Registrar novo Peso
     create:

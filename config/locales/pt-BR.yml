@@ -1,7 +1,9 @@
 pt-BR:
+  layouts:
+    application:
+      weights: Gráfico de Emagrecimento
+      perimeters: Gráfico de Perímetros
   activerecord:
-    models:
-    attributes:
     errors:
       messages:
         record_invalid: 'A validação falhou: %{errors}'

@@ -6,6 +6,7 @@ pt-BR:
     zero: Ainda não há registros de perímetro nessa conta
     index:
       title: Gráfico de Perímetros
+      new: Registrar Perímetro
     new:
       title: Registrar novo Perímetro
     create:
