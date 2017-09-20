@@ -1,8 +1,4 @@
 pt-BR:
-  layouts:
-    application:
-      weights: Gráfico de Emagrecimento
-      perimeters: Gráfico de Perímetros
   activerecord:
     errors:
       messages:
@@ -219,4 +215,5 @@ pt-BR:
       default: "%a, %d de %B de %Y, %H:%M:%S %z"
       long: "%d de %B de %Y, %H:%M"
       short: "%d de %B, %H:%M"
+      shorter: "%d/%m/%Y %H:%M:%S"
     pm: ''

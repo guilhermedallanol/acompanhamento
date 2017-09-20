@@ -4,5 +4,5 @@ class Hunger < ApplicationRecord
 
   belongs_to :user
 
-  enum type: %i{ hunger desire disposal }
+  enum classification: %i{ hunger desire crave }
 end

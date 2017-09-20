@@ -6,7 +6,7 @@ class CreateHungers < ActiveRecord::Migration[5.1]
       t.string :local
       t.string :sensation
       t.string :question
-      t.integer :type
+      t.integer :classification
 
       t.timestamps
     end

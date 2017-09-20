@@ -12,10 +12,10 @@ RSpec.describe Hunger, type: :model do
     it { is_expected.to belong_to(:user) }
   end
 
-  describe "#type" do
-    it "returns type enum" do
-      is_expected.to define_enum_for(:type).with(
-        [:hunger, :desire, :disposal]
+  describe "#classification" do
+    it "returns classification enum" do
+      is_expected.to define_enum_for(:classification).with(
+        [:hunger, :desire, :crave]
       )
     end
   end

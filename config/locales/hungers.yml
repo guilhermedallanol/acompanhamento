@@ -1,0 +1,49 @@
+---
+pt-BR:
+  layouts:
+    application:
+      hungers: Monitoramento da Fome
+  hungers:
+    one: "%{count} registro"
+    other: "%{count} registros"
+    zero: Ainda não há registros de fome nessa conta
+    index:
+      title: Monitoramento da Fome
+      new: Registrar Fome
+    new:
+      title: Registrar Fome
+    create:
+      success: Registro de Fome criado com sucesso
+    destroy:
+      success: Registro de Fome removido com sucesso
+  hunger:
+    confirm_deletion: Você tem certeza que deseja excluir esse registro?
+    enums:
+      classification:
+        hunger: Fome
+        desire: Desejo
+        crave: Vontade
+  activerecord:
+    models:
+      hunger:
+        one: Fome
+        other: Fome
+    attributes:
+      hunger:
+        registered_at: Data e Hora de Registro
+        local: Local
+        sensation: Sensações
+        question: Pergunta-Chave
+        classification: Classificação
+  simple_form:
+    labels:
+      hunger:
+        registered_at: Data e Hora de Registro
+        local: Local
+        sensation: Sensações
+        question: Pergunta-Chave
+        classification: Classificação
+  helpers:
+    submit:
+      hunger:
+        create: Registrar

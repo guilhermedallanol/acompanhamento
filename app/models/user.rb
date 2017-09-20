@@ -6,5 +6,6 @@ class User < ApplicationRecord
   with_options dependent: :destroy do
     has_many :perimeters
     has_many :weights
+    has_many :hungers
   end
 end

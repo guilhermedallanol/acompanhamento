@@ -1,5 +1,8 @@
 ---
 pt-BR:
+  layouts:
+    application:
+      weights: Gráfico de Emagrecimento
   weights:
     one: "%{count} registro"
     other: "%{count} registros"

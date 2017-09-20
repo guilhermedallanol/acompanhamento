@@ -1,5 +1,8 @@
 ---
 pt-BR:
+  layouts:
+    application:
+      perimeters: Gráfico de Perímetros
   perimeters:
     one: "%{count} registro"
     other: "%{count} registros"

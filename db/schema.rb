@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20170919232846) do
     t.string "local"
     t.string "sensation"
     t.string "question"
-    t.integer "type"
+    t.integer "classification"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_hungers_on_user_id"
