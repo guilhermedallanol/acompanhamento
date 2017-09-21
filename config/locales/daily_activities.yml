@@ -1,0 +1,51 @@
+---
+pt-BR:
+  dictionary:
+    attributes: &attributes
+      registered_on: Data de Registro
+      activity_1: Li a lista de razões que tenho para emagrecer quando precisei
+      activity_2: Respeitei a Lista de Alimentos da minha etapa atual
+      activity_3: Comi sempre sentado, devagar e atentamente
+      activity_4: Evitei comer exageradamente
+      activity_5: Tomei nota dos momentos que tive Fome Fisiológica e Vontade de comer
+      activity_6: Não comi por impulso
+      activity_7: Eu disse “EU NAO TENHO ESCOLHA” para alimentos que não planejei comer
+      activity_8: Fiz as atividades físicas que estavam previstas
+      activity_9: Usei a lista de distrações quanto estava com fome ou tendo um desejo incontrolável de comer
+      activity_10: Preenchi meu Planejamento Alimentar Diário referente as refeições de amanhã
+      activity_11: Fiz elogios a mim mesmo quando tive uma pequena vitória
+  layouts:
+    application:
+      daily_activities: Lista de Atividades Diárias
+  daily_activities:
+    one: "%{count} registro"
+    other: "%{count} registros"
+    zero: Ainda não há registros de Atividades Diárias nessa conta
+    index:
+      title: Lista de Atividades Diárias
+      new: Registrar Atividade Diária
+      <<: *attributes
+    new:
+      title: Registrar Atividades Diárias
+    create:
+      success: Atividade Diária registrada com sucesso
+    destroy:
+      success: Registro de Atividade Diária removido com sucesso
+  daily_activity:
+    confirm_deletion: Você tem certeza que deseja excluir esse registro?
+  activerecord:
+    models:
+      daily_activity:
+        one: Atividade Diária
+        other: Atividades Diárias
+    attributes:
+      daily_activity:
+        <<: *attributes
+  simple_form:
+    labels:
+      daily_activity:
+        <<: *attributes
+  helpers:
+    submit:
+      daily_activity:
+        create: Registrar

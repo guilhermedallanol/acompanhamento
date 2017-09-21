@@ -1,7 +1,11 @@
 pt-BR:
+  html:
+    TrueClass: "&#10004;"
+    FalseClass: "&#10006;"
   activerecord:
     errors:
       messages:
+        past_or_present_only: não pode ser futura
         record_invalid: 'A validação falhou: %{errors}'
         restrict_dependent_destroy:
           has_one: Não é possível excluir o registro pois existe um %{record} dependente
