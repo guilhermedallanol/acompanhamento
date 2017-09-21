@@ -1,0 +1,38 @@
+<h1><%= t('.title') %></h1>
+
+<%= link_to t(".new"), new_perimeter_path %>
+
+<h2><%= t(:perimeters, count: @perimeters.count) %></h2>
+
+<% if @perimeters.any? %>
+  <table>
+    <thead>
+      <th>Data de Registro</th>
+      <th>Punho</th>
+      <th>Braço</th>
+      <th>Peitoral</th>
+      <th>Cintura</th>
+      <th>Abdômen</th>
+      <th>Quadril</th>
+      <th>Coxa</th>
+      <th>Panturrilha</th>
+      <th></th>
+    </thead>
+    <tbody>
+      <% @perimeters.each do |perimeter| %>
+        <tr id="<%= dom_id(perimeter) %>">
+          <td><%= perimeter.registered_on %></td>
+          <td><%= perimeter.wrist %></td>
+          <td><%= perimeter.arm %></td>
+          <td><%= perimeter.chest %></td>
+          <td><%= perimeter.waist %></td>
+          <td><%= perimeter.abdomen %></td>
+          <td><%= perimeter.hip %></td>
+          <td><%= perimeter.thigh %></td>
+          <td><%= perimeter.calf %></td>
+          <td><%= perimeter.destroy_link %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>

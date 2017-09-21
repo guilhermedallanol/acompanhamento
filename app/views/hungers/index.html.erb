@@ -1,0 +1,29 @@
+<h1><%= t('.title') %></h1>
+
+<%= link_to t(".new"), new_hunger_path %>
+
+<h2><%= t(:hungers, count: @hungers.count) %></h2>
+
+<% if @hungers.any? %>
+  <table>
+    <thead>
+      <th>Data e Hora de Registro</th>
+      <th>Local</th>
+      <th>Sensações</th>
+      <th>Perguntas-Chave</th>
+      <th>Classificação</th>
+    </thead>
+    <tbody>
+      <% @hungers.each do |hunger| %>
+        <tr id="<%= dom_id(hunger) %>">
+          <td><%= hunger.registered_at %></td>
+          <td><%= hunger.local %></td>
+          <td><%= hunger.sensation %></td>
+          <td><%= hunger.question %></td>
+          <td><%= hunger.classification %></td>
+          <td><%= hunger.destroy_link %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>

@@ -1,13 +1,10 @@
 class WeightDecorator < ApplicationDecorator
-  include Destructable
+  include DestroyLink
+  include RegisteredDate
 
   delegate_all
 
-  def registered_on
-    I18n.l object.registered_on
-  end
-
   def value
-    h.number_to_human(object.value, units: { unit: "kg"}, precision: 6 )
+    number_to_kilogram(object.value)
   end
 end
