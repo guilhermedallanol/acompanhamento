@@ -11,7 +11,7 @@ pt-BR:
       title: Gráfico de Perímetros
       new: Registrar Perímetro
     new:
-      title: Registrar novo Perímetro
+      title: Registrar Perímetro
     create:
       success: Perímetro registrado com sucesso
     destroy:

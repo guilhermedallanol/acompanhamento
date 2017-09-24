@@ -7,6 +7,7 @@ class User < ApplicationRecord
     has_many :daily_activities
     has_many :hungers
     has_many :perimeters
+    has_many :priorities
     has_many :weights
   end
 end

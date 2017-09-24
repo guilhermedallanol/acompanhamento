@@ -1,0 +1,24 @@
+<h1><%= t('.title') %></h1>
+
+<%= link_to t(".new"), new_priority_path %>
+
+<h2><%= t(:priorities, count: @priorities.count) %></h2>
+
+<% if @priorities.any? %>
+  <table>
+    <thead>
+      <th>Categoria</th>
+      <th>Prioridade</th>
+      <th></th>
+    </thead>
+    <tbody>
+      <% @priorities.each do |priority| %>
+        <tr>
+          <td><%= priority.category %></td>
+          <td><%= priority.name %></td>
+          <td><%= priority.destroy_link %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>

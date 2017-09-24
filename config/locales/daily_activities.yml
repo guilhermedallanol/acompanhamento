@@ -26,7 +26,7 @@ pt-BR:
       new: Registrar Atividade Diária
       <<: *attributes
     new:
-      title: Registrar Atividades Diárias
+      title: Registrar Atividade Diária
     create:
       success: Atividade Diária registrada com sucesso
     destroy:

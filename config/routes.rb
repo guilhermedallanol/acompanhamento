@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :perimeters,       only: [:index, :destroy, :new, :create]
   resources :hungers,          only: [:index, :destroy, :new, :create]
   resources :daily_activities, only: [:index, :destroy, :new, :create]
+  resources :priorities,       only: [:index, :destroy, :new, :create]
 end

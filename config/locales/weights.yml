@@ -11,7 +11,7 @@ pt-BR:
       title: Gráfico de Emagrecimento
       new: Registrar Peso
     new:
-      title: Registrar novo Peso
+      title: Registrar Peso
     create:
       success: Peso registrado com sucesso
     destroy:

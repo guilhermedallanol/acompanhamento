@@ -1,0 +1,13 @@
+<h1><%= t('.title') %></h1>
+
+<%= simple_form_for @priority do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :category, required: true,
+    collection: Priority.categories.map { |key,_|
+      [I18n.t(key, scope: [:priority, :enums, :category]), key]
+    }
+  %>
+  <%= f.input :name, required: true %>
+  <%= f.button :submit, class: :button %>
+  <%= link_to 'Cancelar', priorities_path %>
+<% end %>
