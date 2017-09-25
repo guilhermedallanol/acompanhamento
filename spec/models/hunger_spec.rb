@@ -2,10 +2,10 @@ require 'rails_helper'
 
 RSpec.describe Hunger, type: :model do
   context "Validations" do
-    it { is_expected.to validate_presence_of(:registered_at) }
     it { is_expected.to validate_presence_of(:local) }
-    it { is_expected.to validate_presence_of(:sensation) }
     it { is_expected.to validate_presence_of(:question) }
+    it { is_expected.to validate_presence_of(:registered_at) }
+    it { is_expected.to validate_presence_of(:sensation) }
   end
 
   context "Associations" do

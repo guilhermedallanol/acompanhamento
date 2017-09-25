@@ -4,8 +4,10 @@ class User < ApplicationRecord
   validates :email, presence: true
 
   with_options dependent: :destroy do
-    has_many :perimeters
-    has_many :weights
+    has_many :daily_activities
     has_many :hungers
+    has_many :perimeters
+    has_many :priorities
+    has_many :weights
   end
 end

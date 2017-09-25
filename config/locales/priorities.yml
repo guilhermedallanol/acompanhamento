@@ -1,0 +1,43 @@
+---
+pt-BR:
+  layouts:
+    application:
+      priorities: Lista de Prioridades
+  priorities:
+    one: "%{count} registro"
+    other: "%{count} registros"
+    zero: Ainda não há registros de prioridades nessa conta
+    index:
+      title: Lista de Prioridades
+      new: Registrar Prioridade
+    new:
+      title: Registrar Prioridade
+    create:
+      success: Registro de Prioridade criado com sucesso
+    destroy:
+      success: Registro de Prioridade removido com sucesso
+  priority:
+    confirm_deletion: Você tem certeza que deseja excluir esse registro?
+    enums:
+      category:
+        essential: Essencial
+        desirable: Desejável
+        very_desirable: Muito Desejável
+  activerecord:
+    models:
+      priority:
+        one: Prioridade
+        other: Prioridades
+    attributes:
+      priority:
+        category: Categoria
+        name: Prioridade
+  simple_form:
+    labels:
+      priority:
+        category: Categoria
+        name: Prioridade
+  helpers:
+    submit:
+      priority:
+        create: Registrar

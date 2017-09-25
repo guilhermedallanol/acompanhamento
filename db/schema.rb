@@ -10,10 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170919232846) do
+ActiveRecord::Schema.define(version: 20170924224826) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "daily_activities", force: :cascade do |t|
+    t.bigint "user_id"
+    t.date "registered_on"
+    t.boolean "activity_1", default: false, null: false
+    t.boolean "activity_2", default: false, null: false
+    t.boolean "activity_3", default: false, null: false
+    t.boolean "activity_4", default: false, null: false
+    t.boolean "activity_5", default: false, null: false
+    t.boolean "activity_6", default: false, null: false
+    t.boolean "activity_7", default: false, null: false
+    t.boolean "activity_8", default: false, null: false
+    t.boolean "activity_9", default: false, null: false
+    t.boolean "activity_10", default: false, null: false
+    t.boolean "activity_11", default: false, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_daily_activities_on_user_id"
+  end
 
   create_table "hungers", force: :cascade do |t|
     t.bigint "user_id"
@@ -43,6 +62,15 @@ ActiveRecord::Schema.define(version: 20170919232846) do
     t.index ["user_id"], name: "index_perimeters_on_user_id"
   end
 
+  create_table "priorities", force: :cascade do |t|
+    t.bigint "user_id"
+    t.integer "category"
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_priorities_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -63,7 +91,9 @@ ActiveRecord::Schema.define(version: 20170919232846) do
     t.index ["user_id"], name: "index_weights_on_user_id"
   end
 
+  add_foreign_key "daily_activities", "users"
   add_foreign_key "hungers", "users"
   add_foreign_key "perimeters", "users"
+  add_foreign_key "priorities", "users"
   add_foreign_key "weights", "users"
 end

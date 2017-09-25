@@ -1,0 +1,46 @@
+<h1><%= t('.title') %></h1>
+
+<%= link_to t(".new"), new_daily_activity_path %>
+
+<h2><%= t(:daily_activities, count: @daily_activities.count) %></h2>
+
+<% if @daily_activities.any? %>
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <td><%= t('.activity_1') %></td>
+        <td><%= t('.activity_2') %></td>
+        <td><%= t('.activity_3') %></td>
+        <td><%= t('.activity_4') %></td>
+        <td><%= t('.activity_5') %></td>
+        <td><%= t('.activity_6') %></td>
+        <td><%= t('.activity_7') %></td>
+        <td><%= t('.activity_8') %></td>
+        <td><%= t('.activity_9') %></td>
+        <td><%= t('.activity_10') %></td>
+        <td><%= t('.activity_11') %></td>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @daily_activities.each do |activity| %>
+        <tr id="<%= dom_id(activity) %>">
+          <td><%= activity.registered_on %></td>
+          <th><%= activity.activity_1 %></th>
+          <th><%= activity.activity_2 %></th>
+          <th><%= activity.activity_3 %></th>
+          <th><%= activity.activity_4 %></th>
+          <th><%= activity.activity_5 %></th>
+          <th><%= activity.activity_6 %></th>
+          <th><%= activity.activity_7 %></th>
+          <th><%= activity.activity_8 %></th>
+          <th><%= activity.activity_9 %></th>
+          <th><%= activity.activity_10 %></th>
+          <th><%= activity.activity_11 %></th>
+          <td><%= activity.destroy_link %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
