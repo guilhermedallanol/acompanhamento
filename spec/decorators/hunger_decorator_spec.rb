@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe HungerDecorator do
   let(:object) do
-    Hunger.new(registered_at: Time.local(2012, 12, 21, 12, 21, 12))
+    Hunger.new(registered_at: Time.zone.local(2012, 12, 21, 12, 21, 12))
   end
 
   subject { described_class.new(object) }
