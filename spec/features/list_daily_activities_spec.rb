@@ -4,7 +4,8 @@ feature 'Listing Daily Activities' do
   scenario 'displays persisted objects' do
     sign_in
 
-    FactoryGirl.create(:daily_activity, user: @user)
+    day = FactoryGirl.create(:day, user: @user)
+    FactoryGirl.create(:daily_activity, day: day)
 
     visit daily_activities_path
 

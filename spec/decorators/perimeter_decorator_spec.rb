@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe PerimeterDecorator do
-  it_behaves_like 'a decorator with destroy link', :perimeter
   it_behaves_like 'a decorator with registered date'
 
   let(:object) { Perimeter.new }

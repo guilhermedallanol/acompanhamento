@@ -4,7 +4,8 @@ feature 'Listing Weights' do
   scenario 'displays persisted objects' do
     sign_in
 
-    FactoryGirl.create(:weight, value: 90, user: @user)
+    day = FactoryGirl.create(:day, user: @user)
+    FactoryGirl.create(:weight, value: 90, day: day)
 
     visit weights_path
 

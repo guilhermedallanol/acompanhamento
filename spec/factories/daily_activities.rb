@@ -1,7 +1,6 @@
 FactoryGirl.define do
   factory :daily_activity do
-    user nil
-    registered_on "2017-09-20"
+    day nil
     activity_1 false
     activity_2 false
     activity_3 false

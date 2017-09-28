@@ -1,7 +1,5 @@
 <h1><%= t('.title') %></h1>
 
-<%= link_to t(".new"), new_weight_path %>
-
 <h2><%= t(:weights, count: @weights.count) %></h2>
 
 <% if @weights.any? %>
@@ -16,7 +14,6 @@
         <tr id="<%= dom_id(weight) %>">
           <td><%= weight.registered_on %></td>
           <td><%= weight.value %></td>
-          <td><%= weight.destroy_link %></td>
         </tr>
       <% end %>
     </tbody>
