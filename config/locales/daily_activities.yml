@@ -27,10 +27,12 @@ pt-BR:
       <<: *attributes
     new:
       title: Registrar Atividade Diária
-    create:
-      success: Atividade Diária registrada com sucesso
-    destroy:
-      success: Registro de Atividade Diária removido com sucesso
+  days:
+    daily_activities:
+      create:
+        success: Atividade Diária registrada com sucesso
+      destroy:
+        success: Registro de Atividade Diária removido com sucesso
   daily_activity:
     confirm_deletion: Você tem certeza que deseja excluir esse registro?
   activerecord:

@@ -1,0 +1,17 @@
+<h1><%= t('.title') %></h1>
+
+<%= simple_form_for @daily_activity, url: daily_activity_path(@day) do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :activity_1, required: true %>
+  <%= f.input :activity_2, required: true %>
+  <%= f.input :activity_3, required: true %>
+  <%= f.input :activity_4, required: true %>
+  <%= f.input :activity_5, required: true %>
+  <%= f.input :activity_6, required: true %>
+  <%= f.input :activity_7, required: true %>
+  <%= f.input :activity_8, required: true %>
+  <%= f.input :activity_9, required: true %>
+  <%= f.input :activity_10, required: true %>
+  <%= f.input :activity_11, required: true %>
+  <%= f.button :submit, class: :button %>
+<% end %>

@@ -1,0 +1,32 @@
+---
+pt-BR:
+  layouts:
+    application:
+      days: Diário
+  days:
+    one: "%{count} registro"
+    other: "%{count} registros"
+    zero: Ainda não há dias registrados nessa conta
+    index:
+      title: Diário
+      new: Registrar Dia
+    new:
+      title: Registrar Dia
+    create:
+      success: Dia registrado com sucesso
+  activerecord:
+    models:
+      day:
+        one: Dia
+        other: Dias
+    attributes:
+      day:
+        registered_on: Data do Registro
+  simple_form:
+    labels:
+      day:
+        registered_on: Data do Registro
+  helpers:
+    submit:
+      day:
+        create: Registrar

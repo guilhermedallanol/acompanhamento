@@ -12,10 +12,12 @@ pt-BR:
       new: Registrar Peso
     new:
       title: Registrar Peso
-    create:
-      success: Peso registrado com sucesso
-    destroy:
-      success: Registro de peso removido com sucesso
+  days:
+    weights:
+      create:
+        success: Peso registrado com sucesso
+      destroy:
+        success: Registro de peso removido com sucesso
   weight:
     confirm_deletion: Você tem certeza que deseja excluir esse registro?
   activerecord:
