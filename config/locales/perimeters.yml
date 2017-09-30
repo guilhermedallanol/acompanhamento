@@ -10,12 +10,14 @@ pt-BR:
     index:
       title: Gráfico de Perímetros
       new: Registrar Perímetro
-    new:
-      title: Registrar Perímetro
-    create:
-      success: Perímetro registrado com sucesso
-    destroy:
-      success: Registro de perímetro removido com sucesso
+  days:
+    perimeters:
+      new:
+        title: Registrar Perímetro
+      create:
+        success: Perímetro registrado com sucesso
+      destroy:
+        success: Registro de perímetro removido com sucesso
   perimeter:
     confirm_deletion: Você tem certeza que deseja excluir esse registro?
   activerecord:

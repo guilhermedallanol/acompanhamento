@@ -10,10 +10,10 @@ pt-BR:
     index:
       title: Gráfico de Emagrecimento
       new: Registrar Peso
-    new:
-      title: Registrar Peso
   days:
     weights:
+      new:
+        title: Registrar Peso
       create:
         success: Peso registrado com sucesso
       destroy:

@@ -11,7 +11,7 @@ module Days
       @weight = result.weight
 
       if result.success?
-        redirect_to root_path, notice: t(".success")
+        redirect_to new_perimeter_path, notice: t(".success")
       else
         render :new
       end
