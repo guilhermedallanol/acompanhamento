@@ -4,7 +4,8 @@ feature 'Listing Perimeters' do
   scenario 'displays persisted objects' do
     sign_in
 
-    FactoryGirl.create(:perimeter, user: @user)
+    day = FactoryGirl.create(:day, user: @user)
+    FactoryGirl.create(:perimeter, day: day)
 
     visit perimeters_path
 

@@ -10,14 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170924224826) do
+ActiveRecord::Schema.define(version: 20170928024538) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "daily_activities", force: :cascade do |t|
-    t.bigint "user_id"
-    t.date "registered_on"
     t.boolean "activity_1", default: false, null: false
     t.boolean "activity_2", default: false, null: false
     t.boolean "activity_3", default: false, null: false
@@ -31,7 +29,23 @@ ActiveRecord::Schema.define(version: 20170924224826) do
     t.boolean "activity_11", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_daily_activities_on_user_id"
+    t.bigint "day_id"
+    t.index ["day_id"], name: "index_daily_activities_on_day_id"
+  end
+
+  create_table "days", force: :cascade do |t|
+    t.bigint "user_id"
+    t.date "registered_on"
+    t.bigint "weight_id"
+    t.bigint "perimeter_id"
+    t.bigint "daily_activity_id"
+    t.integer "status", default: 0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["daily_activity_id"], name: "index_days_on_daily_activity_id"
+    t.index ["perimeter_id"], name: "index_days_on_perimeter_id"
+    t.index ["user_id"], name: "index_days_on_user_id"
+    t.index ["weight_id"], name: "index_days_on_weight_id"
   end
 
   create_table "hungers", force: :cascade do |t|
@@ -47,7 +61,6 @@ ActiveRecord::Schema.define(version: 20170924224826) do
   end
 
   create_table "perimeters", force: :cascade do |t|
-    t.bigint "user_id"
     t.integer "wrist"
     t.integer "arm"
     t.integer "chest"
@@ -56,10 +69,10 @@ ActiveRecord::Schema.define(version: 20170924224826) do
     t.integer "hip"
     t.integer "thigh"
     t.integer "calf"
-    t.date "registered_on"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_perimeters_on_user_id"
+    t.bigint "day_id"
+    t.index ["day_id"], name: "index_perimeters_on_day_id"
   end
 
   create_table "priorities", force: :cascade do |t|
@@ -83,17 +96,20 @@ ActiveRecord::Schema.define(version: 20170924224826) do
   end
 
   create_table "weights", force: :cascade do |t|
-    t.bigint "user_id"
     t.decimal "value"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.date "registered_on"
-    t.index ["user_id"], name: "index_weights_on_user_id"
+    t.bigint "day_id"
+    t.index ["day_id"], name: "index_weights_on_day_id"
   end
 
-  add_foreign_key "daily_activities", "users"
+  add_foreign_key "daily_activities", "days"
+  add_foreign_key "days", "daily_activities"
+  add_foreign_key "days", "perimeters"
+  add_foreign_key "days", "users"
+  add_foreign_key "days", "weights"
   add_foreign_key "hungers", "users"
-  add_foreign_key "perimeters", "users"
+  add_foreign_key "perimeters", "days"
   add_foreign_key "priorities", "users"
-  add_foreign_key "weights", "users"
+  add_foreign_key "weights", "days"
 end

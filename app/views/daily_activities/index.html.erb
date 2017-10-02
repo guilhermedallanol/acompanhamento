@@ -1,7 +1,5 @@
 <h1><%= t('.title') %></h1>
 
-<%= link_to t(".new"), new_daily_activity_path %>
-
 <h2><%= t(:daily_activities, count: @daily_activities.count) %></h2>
 
 <% if @daily_activities.any? %>
@@ -38,7 +36,6 @@
           <th><%= activity.activity_9 %></th>
           <th><%= activity.activity_10 %></th>
           <th><%= activity.activity_11 %></th>
-          <td><%= activity.destroy_link %></td>
         </tr>
       <% end %>
     </tbody>

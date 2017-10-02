@@ -1,0 +1,7 @@
+<h1><%= t('.title') %></h1>
+
+<%= simple_form_for @weight, url: weight_path(@day) do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :value, required: true %>
+  <%= f.button :submit, class: :button %>
+<% end %>

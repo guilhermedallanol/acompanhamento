@@ -1,5 +1,5 @@
 module Perimeters
-  class CreationService < CreationBaseService
+  class CreationService < WizardCreationBaseService
     def model_key
       :perimeter
     end

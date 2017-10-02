@@ -1,12 +1,5 @@
 class PerimetersController < ApplicationController
-  include Resourceless
-
-  private
-
-  def permitted_attributes
-    [
-      :abdomen, :arm, :calf, :chest, :hip,
-      :registered_on, :thigh, :waist, :wrist
-    ]
+  def index
+    @perimeters = current_user.perimeters.decorate
   end
 end

@@ -1,7 +1,9 @@
 class Perimeter < ApplicationRecord
-  validates :abdomen, :arm, :calf, :chest, :hip,
-            :registered_on, :thigh, :waist, :wrist,
+  validates :abdomen, :arm, :calf, :chest,
+            :hip, :thigh, :waist, :wrist,
             presence: true
 
-  belongs_to :user
+  belongs_to :day
+
+  delegate :registered_on, to: :day
 end

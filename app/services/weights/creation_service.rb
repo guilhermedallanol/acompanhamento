@@ -1,5 +1,5 @@
 module Weights
-  class CreationService < CreationBaseService
+  class CreationService < WizardCreationBaseService
     def model_key
       :weight
     end

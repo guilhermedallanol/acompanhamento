@@ -1,9 +1,7 @@
 <h1><%= t('.title') %></h1>
 
-<%= simple_form_for @daily_activity do |f| %>
+<%= simple_form_for @daily_activity, url: daily_activity_path(@day) do |f| %>
   <%= f.error_notification %>
-  <%= f.input :registered_on, html5: true, required: true,
-    input_html: { value: Date.current } %>
   <%= f.input :activity_1, required: true %>
   <%= f.input :activity_2, required: true %>
   <%= f.input :activity_3, required: true %>
@@ -16,5 +14,4 @@
   <%= f.input :activity_10, required: true %>
   <%= f.input :activity_11, required: true %>
   <%= f.button :submit, class: :button %>
-  <%= link_to 'Cancelar', daily_activities_path %>
 <% end %>

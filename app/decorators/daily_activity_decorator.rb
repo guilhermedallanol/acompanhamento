@@ -1,5 +1,4 @@
 class DailyActivityDecorator < ApplicationDecorator
-  include DestroyLink
   include RegisteredDate
 
   delegate_all

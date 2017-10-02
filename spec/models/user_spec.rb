@@ -6,9 +6,8 @@ RSpec.describe User, type: :model do
   end
 
   context "Associations" do
-    it { is_expected.to have_many(:daily_activities) }
+    it { is_expected.to have_many(:days) }
     it { is_expected.to have_many(:hungers) }
-    it { is_expected.to have_many(:perimeters) }
-    it { is_expected.to have_many(:weights) }
+    it { is_expected.to have_many(:priorities) }
   end
 end

@@ -1,9 +1,5 @@
 class WeightsController < ApplicationController
-  include Resourceless
-
-  private
-
-  def permitted_attributes
-    [:registered_on, :value]
+  def index
+    @weights = current_user.weights.decorate
   end
 end

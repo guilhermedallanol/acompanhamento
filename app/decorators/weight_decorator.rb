@@ -1,5 +1,4 @@
 class WeightDecorator < ApplicationDecorator
-  include DestroyLink
   include RegisteredDate
 
   delegate_all

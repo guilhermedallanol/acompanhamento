@@ -16,21 +16,23 @@ pt-BR:
       activity_11: Fiz elogios a mim mesmo quando tive uma pequena vitória
   layouts:
     application:
-      daily_activities: Lista de Atividades Diárias
+      daily_activities: Gráfico de Atividades Diárias
   daily_activities:
     one: "%{count} registro"
     other: "%{count} registros"
     zero: Ainda não há registros de Atividades Diárias nessa conta
     index:
-      title: Lista de Atividades Diárias
+      title: Gráfico de Atividades Diárias
       new: Registrar Atividade Diária
       <<: *attributes
-    new:
-      title: Registrar Atividade Diária
-    create:
-      success: Atividade Diária registrada com sucesso
-    destroy:
-      success: Registro de Atividade Diária removido com sucesso
+  days:
+    daily_activities:
+      new:
+        title: Registrar Atividade Diária
+      create:
+        success: Atividade Diária registrada com sucesso
+      destroy:
+        success: Registro de Atividade Diária removido com sucesso
   daily_activity:
     confirm_deletion: Você tem certeza que deseja excluir esse registro?
   activerecord:

@@ -1,5 +1,5 @@
 module DailyActivities
-  class CreationService < CreationBaseService
+  class CreationService < WizardCreationBaseService
     def model_key
       :daily_activity
     end

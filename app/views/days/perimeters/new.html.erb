@@ -1,9 +1,7 @@
 <h1><%= t('.title') %></h1>
 
-<%= simple_form_for @perimeter do |f| %>
+<%= simple_form_for @perimeter, url: perimeter_path(@day) do |f| %>
   <%= f.error_notification %>
-  <%= f.input :registered_on, html5: true, required: true,
-    input_html: { value: Date.current } %>
   <%= f.input :wrist, required: true %>
   <%= f.input :arm, required: true %>
   <%= f.input :chest, required: true %>
@@ -13,5 +11,4 @@
   <%= f.input :thigh, required: true %>
   <%= f.input :calf, required: true %>
   <%= f.button :submit, class: :button %>
-  <%= link_to 'Cancelar', perimeters_path %>
 <% end %>

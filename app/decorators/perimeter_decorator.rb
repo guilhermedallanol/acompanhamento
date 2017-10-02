@@ -1,5 +1,4 @@
 class PerimeterDecorator < ApplicationDecorator
-  include DestroyLink
   include RegisteredDate
 
   delegate_all
