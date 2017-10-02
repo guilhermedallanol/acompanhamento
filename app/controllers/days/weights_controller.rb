@@ -1,26 +1,19 @@
 module Days
   class WeightsController < BaseController
-    def new
-      day
-      @weight = Weight.new
-    end
-
-    def create
-      result = Weights::CreationService.perform(weight_params, day)
-
-      @weight = result.weight
-
-      if result.success?
-        redirect_to new_perimeter_path, notice: t(".success")
-      else
-        render :new
-      end
-    end
+    include NewCreate
 
     private
 
-    def weight_params
-      params.require(:weight).permit(:value)
+    def permitted_attributes
+      [:value]
+    end
+
+    def after_creation_path
+      new_perimeter_path(@day)
+    end
+
+    def scope
+      day
     end
   end
 end

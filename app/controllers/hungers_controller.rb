@@ -8,4 +8,8 @@ class HungersController < ApplicationController
       :local, :question, :registered_at, :sensation, :classification
     ]
   end
+
+  def after_creation_path
+    hungers_path
+  end
 end
